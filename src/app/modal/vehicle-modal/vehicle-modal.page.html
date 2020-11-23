@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vehicle Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="regnNo">
+      <ion-label class="mobtitle">Regn No</ion-label>
+      <ion-label class="mobdesc">{{regnNo}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="regnDt">
+      <ion-label class="mobtitle">Regn Date</ion-label>
+      <ion-label>{{regnDt}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="offCd">
+      <ion-label class="mobtitle">offCd</ion-label>
+      <ion-label>{{offCd}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="engNo">
+      <ion-label class="mobtitle">Engine No</ion-label>
+      <ion-label>{{engNo}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="chasiNo">
+      <ion-label class="mobtitle">Chasis Number</ion-label>
+      <ion-label>{{chasiNo}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="ownerName" lines="none">
+      <ion-label class="mobtitle">Owner Name</ion-label>
+    </ion-item>
+    <ion-item *ngIf="ownerName">
+      <ion-label>{{ownerName}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="fName">
+      <ion-label class="mobtitle">fName</ion-label>
+      <ion-label>{{fName}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd1" lines="none">
+      <ion-label class="mobtitle">Customer Address1</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd1">
+      <ion-label class="ion-text-wrap">{{cAdd1}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd2" lines="none">
+      <ion-label class="mobtitle">Customer Address2</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd2">
+      <ion-label class="ion-text-wrap">{{cAdd2}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd3" lines="none">
+      <ion-label class="mobtitle">Customer Address3</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cAdd3">
+      <ion-label class="ion-text-wrap">{{cAdd3}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="cPincode">
+      <ion-label class="mobtitle">Pin Code</ion-label>
+      <ion-label>{{cPincode}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd1" lines="none">
+      <ion-label class="mobtitle">P Add1</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd1">
+      <ion-label class="ion-text-wrap">{{pAdd1}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd2" lines="none">
+      <ion-label class="mobtitle">p Add2</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd2">
+      <ion-label>{{pAdd2}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd3" lines="none">
+      <ion-label class="mobtitle">P Add3</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pAdd3">
+      <ion-label class="ion-text-wrap">{{pAdd3}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="pPincode">
+      <ion-label class="mobtitle">Pin Code</ion-label>
+      <ion-label>{{pPincode}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="color">
+      <ion-label class="mobtitle">Color</ion-label>
+      <ion-label>{{color}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="makerModel">
+      <ion-label class="mobtitle">Maker Model</ion-label>
+      <ion-label>{{makerModel}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="descr" lines="none">
+      <ion-label class="mobtitle">Description</ion-label>
+    </ion-item>
+    <ion-item *ngIf="descr">
+      <ion-label class="ion-text-wrap">{{descr}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="opDt">
+      <ion-label class="mobtitle">OP Date</ion-label>
+      <ion-label>{{opDt}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="mobileNo">
+      <ion-label class="mobtitle">Mobile No</ion-label>
+      <ion-label>{{mobileNo}}</ion-label>
+    </ion-item>
+    <ion-item *ngIf="emailId" lines="none">
+      <ion-label class="mobtitle">Email Id</ion-label>
+    </ion-item>
+    <ion-item *ngIf="emailId">
+      <ion-label class="ion-text-wrap">{{emailId}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="shareThis()">Share</ion-button>
+</ion-content>

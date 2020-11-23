@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Vehicles</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchQuery" (ionClear)="resetFilterData();"></ion-searchbar>
+    <ion-button expand="block" (click)="searchVehicle();">Search</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="vehicleData?.length > 0 && isSearched">
+    <ion-item *ngFor="let vehiItem of vehicleData">
+      <ion-label (click)="showVehicleDetails(vehiItem)">
+        <h2>{{vehiItem.regn_no}}</h2>
+        <p>{{vehiItem.regn_dt}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="vehicleData?.length <= 0 && isSearched">
+    <ion-item >
+      <ion-label>
+        <h2>No items found.</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

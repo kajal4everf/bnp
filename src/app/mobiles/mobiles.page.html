@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mobiles</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchQuery" (ionClear)="resetFilterData();"></ion-searchbar>
+    <ion-button expand="block" (click)="searchMobile();">Search</ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="mobileData?.length > 0 && isSearched">
+    <ion-item *ngFor="let mobItem of mobileData">
+      <ion-label (click)="showMobileDetails(mobItem)">
+        <h2>{{mobItem.phone_no}}</h2>
+        <p>{{mobItem.name}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="mobileData?.length <= 0 && isSearched">
+    <ion-item >
+      <ion-label>
+        <h2>No items found.</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
